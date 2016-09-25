@@ -1,0 +1,20 @@
+version: '2'
+services:
+  adminer:
+    image: clue/adminer
+    container_name: adminer
+    hostname: adminer
+    ports:
+      - "80:80"
+
+  konakart:
+    depends_on:
+      - adminer
+    image: sandbreak80/docker_konakart
+    container_name: konakart
+    hostname: konakart
+    links:
+      - adminer
+    ports:
+      - "8780:8780"
+      - "3306:3306"

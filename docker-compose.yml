@@ -1,7 +1,7 @@
 version: '2'
 services:
   adminer:
-    image: clue/adminer
+    image: sandbreak80/adminer
     container_name: adminer
     hostname: adminer
     ports:

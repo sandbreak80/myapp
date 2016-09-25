@@ -5,7 +5,7 @@ services:
     container_name: adminer
     hostname: adminer
     ports:
-      - "80:80"
+      - "8081:80"
 
   konakart:
     depends_on:
